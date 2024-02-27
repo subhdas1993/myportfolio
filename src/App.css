@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Sora:wght@500&display=swap');
+
+/* about component start */
+
+.linkBlinking {
+  animation: blinktext 3s linear infinite;
+}
+
+@keyframes blinktext {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* about component end */
+
+/* contactme component start */
+
+input:focus~label,
+input:not(:placeholder-shown)~label,
+textarea:focus~label,
+textarea:not(:placeholder-shown)~label {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-scale-x: 0.75;
+  --tw-scale-y: 0.75;
+  --tw-translate-y: -2vmax;
+}
+
+input:focus~label,
+select:focus~label {
+  --tw-text-opacity: 1;
+  color: rgba(10, 112, 41, var(--tw-text-opacity));
+  --tw-padding-left: 0.75rem;
+  --tw-padding-right: 0.75rem;
+}
+
+/* contactme component end */
+
+/* sample project component start */
+
+.pd1{
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.pd2{
+  transition: .5s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.prodetailshover:hover .pd1{
+  opacity:0.3;
+}
+
+.prodetailshover:hover .pd2{
+  opacity:1;
+}
+
+/* sample project component end */
