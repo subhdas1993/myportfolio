@@ -48,7 +48,31 @@ function skills() {
               <div className='capitalize portrait:text-[3vmax] landscape:text-[2vmax] font-bold text-center'>Responsive</div>
             </div>
           </div>
-          
+          {/*<div className='bg-[#DBE8D8] flex justify-between items-center landscape:w-1/3 md:landscape:w-1/4 xl:landscape:w-1/5 portrait:w-full portrait:w-1/2 portrait:w-1/3 rounded-3xl p-2 border border-[#0A7029] m-1'>
+            <div className='bg-[url("../logos/typescript.png")] w-1/3 aspect-square bg-contain bg-center bg-no-repeat'></div>
+            <div className='w-2/3'>
+              <div className='portrait:text-[3vmax] landscape:text-[2vmax] font-bold text-center'>TypeScript</div>
+            </div>
+          </div>
+
+          <div className='bg-[#DBE8D8] flex justify-between items-center landscape:w-1/3 md:landscape:w-1/4 xl:landscape:w-1/5 portrait:w-full portrait:w-1/2 portrait:w-1/3 rounded-3xl p-2 border border-[#0A7029] m-1'>
+            <div className='bg-[url("../logos/php.png")] w-1/3 aspect-square bg-contain bg-center bg-no-repeat'></div>
+            <div className='w-2/3'>
+              <div className='uppercase portrait:text-[3vmax] landscape:text-[2vmax] font-bold text-center'>php</div>
+            </div>
+          </div>
+          <div className='bg-[#DBE8D8] flex justify-between items-center landscape:w-1/3 md:landscape:w-1/4 xl:landscape:w-1/5 portrait:w-full portrait:w-1/2 portrait:w-1/3 rounded-3xl p-2 border border-[#0A7029] m-1'>
+            <div className='bg-[url("../logos/MySQL.png")] w-1/3 aspect-square bg-contain bg-center bg-no-repeat'></div>
+            <div className='w-2/3'>
+              <div className='portrait:text-[3vmax] landscape:text-[2vmax] font-bold text-center'>MySQL</div>
+            </div>
+          </div>
+          <div className='bg-[#DBE8D8] flex justify-between items-center landscape:w-1/3 md:landscape:w-1/4 xl:landscape:w-1/5 portrait:w-full portrait:w-1/2 portrait:w-1/3 rounded-3xl p-2 border border-[#0A7029] m-1'>
+            <div className='bg-[url("../logos/wordpress.png")] w-1/3 aspect-square bg-contain bg-center bg-no-repeat'></div>
+            <div className='w-2/3'>
+              <div className='capitalize portrait:text-[3vmax] landscape:text-[2vmax] font-bold text-center'>wordpress</div>
+            </div>
+  </div>*/}
           <div className='bg-[#DBE8D8] flex justify-between items-center landscape:w-1/3 md:landscape:w-1/4 xl:landscape:w-1/5 portrait:w-full portrait:w-1/2 portrait:w-1/3 rounded-3xl p-2 border border-[#0A7029] m-1'>
             <div className='bg-[url("../logos/github_logo.png")] w-1/3 aspect-square bg-contain bg-center bg-no-repeat'></div>
             <div className='w-2/3'>
