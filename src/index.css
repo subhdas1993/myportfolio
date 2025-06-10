@@ -5,10 +5,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -45,7 +41,6 @@
    .displaymenu{
     @apply w-full pt-0 p-7 absolute z-100 -left-[0.03%] bg-[#1A1A1A];
    }
-   /* absolute w-full bg-inherit -left-[0.03%] pt-0 p-7 z-100 */
 }
 
 @media only screen and (width >= 64rem) {
