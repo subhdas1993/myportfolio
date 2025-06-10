@@ -1,19 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-} */
+}
+
+@theme{
+  /* Only for IntroSection h1 tag */
+  --breakpoint-tlg1: 78rem;
+  --breakpoint-tlg2: 78rem;
+}
+
+.navbar_responsive {
+  @apply z-100 w-full p-7 text-white;
+}
+
+.introsection_image{
+  @apply object-cover object-center w-full h-[100svh] lg:h-full;
+}
+
+@media only screen and (width < 64rem) {
+  .navbar_responsive_max_tablet {
+    @apply bg-[#1A1A1A] flex justify-between;
+  }
+
+   .min_large_screen {
+    @apply w-full;
+   }
+
+   .max_large_screen_navlogomenu{
+    @apply flex justify-between items-center;
+   }
+
+   .displaymenu{
+    @apply w-full pt-0 p-7 absolute z-100 -left-[0.03%] bg-[#1A1A1A];
+   }
+   /* absolute w-full bg-inherit -left-[0.03%] pt-0 p-7 z-100 */
+}
+
+@media only screen and (width >= 64rem) {
+  .navbar_responsive_min_tablet {
+    @apply bg-transparent fixed;
+  }
+
+  .min_large_screen {
+    @apply bg-[#1A1A1A] px-3 py-5 flex justify-between items-center;
+  }
+
+  .displaymenu{
+    @apply flex gap-6;
+   }
+}
