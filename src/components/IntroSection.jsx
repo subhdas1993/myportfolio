@@ -25,7 +25,7 @@ function IntroSection() {
             <h1 className='lg:max-tlg1:text-5xl tlg1:max-tlg2:text-[3.5rem]'>this is Subhashis Das<br/>
             a Web Developer</h1>
           </div>
-          <ul className='flex gap-4 justify-center lg:justify-start max-lg:flex-wrap'>
+          <ul className='flex gap-4 justify-center lg:justify-start max-xl:flex-wrap'>
             <li className='border-2 p-4 font-bold text-white bg-[#1A1A1A] border-[#1A1A1A] hover:bg-[#C93F1D] hover:border-[#C93F1D]'>
               <a href="#aboutme" className='p-4'>
                 More About Me
@@ -46,14 +46,22 @@ function IntroSection() {
           <button onClick={downloadResume} className='border-2 px-10 py-4 font-bold text-white hover:text-[#1A1A1A] hover:bg-white'>Get My CV</button>
         </div> */}
         <div className='lg:w-1/2 relative lg:static z-98'>
-          <picture>
+        <picture>
+            <source media="(max-width:40rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_680px.jpg?fm=webp?q=40" className='introsection_image' />
+            <source media="(max-width:48rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_768px.jpg?fm=webp?q=40" className='introsection_image' />
+            <source media="(max-width:64rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_1024px.jpg?fm=webp" className='introsection_image' />
+            <source media="(max-width:80rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_680px.jpg?fm=webp" className='introsection_image' />
+            <source media="(max-width:96rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_768px.jpg?fm=webp" className='introsection_image' />
+            <img src="/.netlify/images?url=/profile_picture/profile_images/profile_picture.jpg?fm=webp" alt="subhashis_das" className='introsection_image' />
+          </picture>
+          {/* <picture>
             <source media="(max-width:40rem)" srcSet="/profile_picture/profile_images/profile_picture_max_680px.jpg" className='introsection_image' />
             <source media="(max-width:48rem)" srcSet="/profile_picture/profile_images/profile_picture_max_768px.jpg" className='introsection_image' />
             <source media="(max-width:64rem)" srcSet="/profile_picture/profile_images/profile_picture_max_1024px.jpg" className='introsection_image' />
             <source media="(max-width:80rem)" srcSet="/profile_picture/profile_images/profile_picture_max_680px.jpg" className='introsection_image' />
             <source media="(max-width:96rem)" srcSet="/profile_picture/profile_images/profile_picture_max_768px.jpg" className='introsection_image' />
             <img src="/profile_picture/profile_images/profile_picture.jpg" alt="Flowers" className='introsection_image' />
-          </picture>
+          </picture> */}
         </div>
       </div>
     </>

@@ -23,6 +23,56 @@ function AboutSection() {
           <div className='text-[6svh] ps-3 border-s-20'>Skills</div>
           <ul className='grid grid-cols-2 md:grid-cols-8 gap-10 font-extrabold'>
             <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/html.png?fm=webp&q=40" alt="html" width="100" height="100" className='object-cover object-center w-3/5 lg:w-1/2' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/css.png?fm=webp&q=40" alt="css" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/js.png?fm=webp&q=40" alt="javascript" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/jquery_logo.png?fm=webp&q=40" alt="jquery" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/responsive.jpg" alt="responsive" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/github_logo.png?fm=webp&q=40" alt="github" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/bootstrap_logo.png?fm=webp&q=40" alt="bootstrap" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/tailwindCSS.png?fm=webp&q=40" alt="tailwindCSS" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/reactjs_logo.png?fm=webp&q=40" alt="react" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/node_logo.png?fm=webp&q=40" alt="node" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/expressjs_logo.png?fm=webp&q=40" alt="express" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/wordpress.png?fm=webp&q=40" alt="wordpress" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/MySQL.png?fm=webp&q=40" alt="mysql" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/php.png?fm=webp&q=40" alt="php" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/laravel.png?fm=webp&q=40" alt="laravel" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
+              <img src="/.netlify/images?url=/logos/typescript.png?fm=webp&q=40" alt="typescript" width="100" height="100" className='object-cover object-center w-4/5 lg:w-3/5' />
+            </li>
+          </ul>
+          {/* <ul className='grid grid-cols-2 md:grid-cols-8 gap-10 font-extrabold'>
+            <li className='flex flex-col lg:flex-row justify-center items-center'>
               <img src="/logos/html.png" alt="html" className='object-cover object-center w-3/5 lg:w-1/2' />
             </li>
             <li className='flex flex-col lg:flex-row justify-center items-center'>
@@ -70,7 +120,7 @@ function AboutSection() {
             <li className='flex flex-col lg:flex-row justify-center items-center'>
               <img src="/logos/typescript.png" alt="typescript" className='object-cover object-center w-4/5 lg:w-3/5' />
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </>

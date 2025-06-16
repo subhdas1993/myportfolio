@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useBoldMenu from '../hooks/useBoldMenu'
-import useWhiteSelect from '../hooks/useWhiteSelect';
+import useOrangeSelect from '../hooks/useOrangeSelect';
 import { VscMenu, VscChromeClose } from "react-icons/vsc";
 
 
@@ -42,7 +42,7 @@ function HeaderSection() {
   }, []);
 
   useBoldMenu();
-  useWhiteSelect();
+  useOrangeSelect();
 
   return (
     <>
@@ -50,12 +50,12 @@ function HeaderSection() {
         <div className='min_large_screen'>
           <div className={`text-3xl font-bold uppercase max_large_screen_navlogomenu`}>
             <h1 className='text-white'>Subhashis</h1>
-            <button className='block lg:hidden' onClick={toggleDrawer}>
+            <button className='block lg:hidden' onClick={toggleDrawer} title="Menu">
               <div className='menucol'>{isOpen ? <VscMenu /> : <VscChromeClose />}</div>
             </button>
           </div>
-          <ul className={`mainMenu text-gray-500 font-bold displaymenu ${isOpen ? '-top-[500%]' : 'top-[100%]'}`}>
-            <li className='text-white py-5 lg:py-0'>
+          <ul className={`mainMenu text-white font-bold displaymenu ${isOpen ? '-top-[500%]' : 'top-[100%]'}`}>
+            <li className='text-orange-500 py-5 lg:py-0'>
               <a href="#intro" className='boldMenu pb-5 lg:py-0' onClick={toggleDrawer}>Intro</a>
             </li>
             <li className='py-5 lg:py-0'>

@@ -19,12 +19,12 @@ function WorkSection() {
                   <div key={lpd.key} className='rounded-2xl lg:grid lg:grid-cols-[30%_70%] lg:grid-rows-1 lg:justify-between shadow-xl/40'>
                     <div className='lg:px-3 lg:flex lg:justify-center lg:items-center'>
                       <figure>
-                      <img className='max-lg:rounded-t-2xl' src={`../liveprojectsnap/${lpd.img}`} alt={lpd.title}/>
+                      <img className='max-lg:rounded-t-2xl' src={`/.netlify/images?url=/liveprojectsnap/${lpd.img}?fm=webp&q=50`} alt={lpd.title} width="270" height="140"/>
                         <figcaption className='font-semibold text-center text-xl pt-2'>{lpd.title}</figcaption>
                       </figure>
                     </div>
                     <div className='text-justify p-5 lg:text-[1.3vmax]'>
-                      <div className='max-lg:text-center text-right'><a className='font-semibold hover:underline hover:underline-offset-3' href={lpd.link}>Click Here</a></div>
+                      <div className='max-lg:text-center text-right'><a className='font-semibold hover:underline hover:underline-offset-3' href={lpd.link}>Visit the Page</a></div>
                       <div className='font-semibold text-center lg:py-2'>Description</div>
                       <ul className='pb-4'>
                         {
@@ -55,12 +55,12 @@ function WorkSection() {
                   <div key={spd.key} className='rounded-2xl lg:grid lg:grid-cols-[30%_70%] lg:grid-rows-1 lg:justify-between shadow-xl/40'>
                     <div className='lg:px-3 lg:flex lg:justify-center lg:items-center'>
                       <figure>
-                        <img className='max-lg:rounded-t-2xl' src={`../sampleprojectsnap/${spd.img}`} alt={spd.title}/>
+                        <img className='max-lg:rounded-t-2xl' src={`/.netlify/images?url=/sampleprojectsnap/${spd.img}?fm=webp&q=50`} alt={spd.title} width="270" height="140"/>
                         <figcaption className='font-semibold text-center text-xl pt-2'>{spd.title}</figcaption>
                       </figure>
                     </div>
                     <div className='text-justify p-5 lg:text-[1.3vmax]'>
-                      <div className='max-lg:text-center text-right'><a className='font-semibold hover:underline hover:underline-offset-3' href={spd.link}>Click Here</a></div>
+                      <div className='max-lg:text-center text-right'><a className='font-semibold hover:underline hover:underline-offset-3' href={spd.link}>Visit the Page</a></div>
                       <div className='font-semibold text-center lg:py-2'>Description</div>
                       <ul className='pb-4'>
                         {
