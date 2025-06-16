@@ -19,7 +19,7 @@ function WorkSection() {
                   <div key={lpd.key} className='rounded-2xl lg:grid lg:grid-cols-[30%_70%] lg:grid-rows-1 lg:justify-between shadow-xl/40'>
                     <div className='lg:px-3 lg:flex lg:justify-center lg:items-center'>
                       <figure>
-                      <img className='max-lg:rounded-t-2xl' src={`/.netlify/images?url=/liveprojectsnap/${lpd.img}?fm=webp&q=50`} alt={lpd.title} width="270" height="140"/>
+                      <img className='max-lg:rounded-t-2xl w-full h-full' src={`/.netlify/images?url=/liveprojectsnap/${lpd.img}?fm=webp&q=50`} alt={lpd.title} width="270" height="140"/>
                         <figcaption className='font-semibold text-center text-xl pt-2'>{lpd.title}</figcaption>
                       </figure>
                     </div>
@@ -55,7 +55,7 @@ function WorkSection() {
                   <div key={spd.key} className='rounded-2xl lg:grid lg:grid-cols-[30%_70%] lg:grid-rows-1 lg:justify-between shadow-xl/40'>
                     <div className='lg:px-3 lg:flex lg:justify-center lg:items-center'>
                       <figure>
-                        <img className='max-lg:rounded-t-2xl' src={`/.netlify/images?url=/sampleprojectsnap/${spd.img}?fm=webp&q=50`} alt={spd.title} width="270" height="140"/>
+                        <img className='max-lg:rounded-t-2xl w-full h-full' src={`/.netlify/images?url=/sampleprojectsnap/${spd.img}?fm=webp&q=50`} alt={spd.title} width="270" height="140"/>
                         <figcaption className='font-semibold text-center text-xl pt-2'>{spd.title}</figcaption>
                       </figure>
                     </div>
