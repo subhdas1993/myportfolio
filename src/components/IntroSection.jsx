@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 
 function IntroSection() {
   const downloadResume = () => {
-        // using Java Script method to get PDF file
-        // fetch('../../resume/Subhashis Das Resume.pdf').then(response => {
         fetch('resume/SUBHASHIS_DAS_Resume.pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
@@ -41,10 +39,6 @@ function IntroSection() {
             </li>
           </ul>
         </div>
-        {/* <div className='mix-blend-exclusion flex justify-center items-center absolute bottom-[15%] lg:bottom-[10%] lg:left-[43.5%] z-99'>
-          <div className='w-20 lg:w-50 border-1 border-white'></div>
-          <button onClick={downloadResume} className='border-2 px-10 py-4 font-bold text-white hover:text-[#1A1A1A] hover:bg-white'>Get My CV</button>
-        </div> */}
         <div className='lg:w-1/2 relative lg:static z-98'>
         <picture>
             <source media="(max-width:40rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_680px.jpg?fm=webp?q=40" className='introsection_image' />
