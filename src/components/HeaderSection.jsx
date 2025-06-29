@@ -3,6 +3,8 @@ import useBoldMenu from '../hooks/useBoldMenu'
 import useOrangeSelect from '../hooks/useOrangeSelect';
 import { VscMenu, VscChromeClose } from "react-icons/vsc";
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function HeaderSection() {
   const [isOpen, setIsOpen] = useState('false');
@@ -12,7 +14,18 @@ function HeaderSection() {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [enableAOS, setEnableAOS] = useState(true);
   useEffect(() => {
+    // AOS.init({ duration: 800, once: true })
+    const width = window.innerWidth;
+
+    if (width < 640) {
+      setEnableAOS(false);
+    } else {
+      setEnableAOS(true);
+      AOS.init({ duration: 800, once: true });
+    }
+
     const handleNavScroll = () => {
       if (window.scrollY > 300) {
         setIsScrolled(true);
@@ -46,7 +59,7 @@ function HeaderSection() {
 
   return (
     <>
-      <div className={`${disableState ? (isScrolled ? "fixed" : "relative") : ''} navbar_responsive navbar_responsive_max_tablet navbar_responsive_min_tablet`}>
+      <div className={`${disableState ? (isScrolled ? "fixed" : "relative") : ''} navbar_responsive navbar_responsive_max_tablet navbar_responsive_min_tablet`} {...(enableAOS ? { 'data-aos': 'fade-down' } : {})}>
         <div className='min_large_screen'>
           <div className={`text-3xl font-bold uppercase max_large_screen_navlogomenu`}>
             <h1 className='text-white'>Subhashis</h1>

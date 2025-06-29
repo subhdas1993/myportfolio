@@ -1,27 +1,67 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function IntroSection() {
   const downloadResume = () => {
-        fetch('resume/SUBHASHIS_DAS_Resume.pdf').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'Subhashis_Das_Resume.pdf';
-                alink.click();
-            })
-        })
-    }
+    // using Java Script method to get PDF file
+    // fetch('../../resume/Subhashis Das Resume.pdf').then(response => {
+    fetch('resume/SUBHASHIS_DAS_Resume.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'Subhashis_Das_Resume.pdf';
+        alink.click();
+      })
+    })
+  }
+  
+  const [animations, setAnimations] = useState({
+    intro: '',
+    image: ''
+  });
+
+  const [renderKey, setRenderKey] = useState(0); // For remounting DOM
+
+  useEffect(() => {
+    const updateAnimations = () => {
+      const width = window.innerWidth;
+
+      if (width < 1024) {
+        setAnimations({
+          intro: 'fade-up',
+          image: 'fade-down',
+        });
+      } else {
+        setAnimations({
+          intro: 'fade-right',
+          image: 'fade-left',
+        });
+      }
+
+      // 🔁 Force React to re-render components with new keys
+      setRenderKey(prev => prev + 1);
+    };
+
+    AOS.init({ duration: 800, once: true });
+
+    updateAnimations(); // On load
+
+    window.addEventListener('resize', updateAnimations);
+    return () => window.removeEventListener('resize', updateAnimations);
+  }, []);
   return (
     <>
-      <div id="intro" className="main_section bg-[#eceeec] h-[100svh] lg:pt-0 relative lg:static lg:flex">
-        <div className='w-full lg:w-1/2 flex flex-col justify-center gap-10 lg:pl-10 absolute lg:static z-99 max-lg:text-white top-[45%]'>
+      <div id="intro" className="main_section bg-[#eceeec] h-[100svh] lg:pt-0 relative lg:static lg:flex overflow-x-hidden">
+        <div className='w-full lg:w-1/2 flex flex-col justify-center gap-10 lg:pl-10 absolute lg:static z-99 max-lg:text-white top-[45%]' data-aos={animations.intro} data-aos-delay='1000' key={`intro-${renderKey}`}>
           <div className='text-4xl lg:text-6xl font-bold text-center lg:text-left'>
             <h1 className='uppercase text-lg lg:text-2xl'>Hello,</h1>
-            <h1 className='lg:max-tlg1:text-5xl tlg1:max-tlg2:text-[3.5rem]'>this is Subhashis Das<br/>
-            a Web Developer</h1>
+            <h1 className='lg:max-tlg1:text-5xl tlg1:max-tlg2:text-[3.5rem]'>this is Subhashis Das<br />
+              a Web Developer</h1>
           </div>
           <ul className='flex gap-4 justify-center lg:justify-start max-xl:flex-wrap'>
             <li className='border-2 p-4 font-bold text-white bg-[#1A1A1A] border-[#1A1A1A] hover:bg-[#C93F1D] hover:border-[#C93F1D]'>
@@ -39,8 +79,12 @@ function IntroSection() {
             </li>
           </ul>
         </div>
-        <div className='lg:w-1/2 relative lg:static z-98'>
-        <picture>
+        {/* <div className='mix-blend-exclusion flex justify-center items-center absolute bottom-[15%] lg:bottom-[10%] lg:left-[43.5%] z-99'>
+          <div className='w-20 lg:w-50 border-1 border-white'></div>
+          <button onClick={downloadResume} className='border-2 px-10 py-4 font-bold text-white hover:text-[#1A1A1A] hover:bg-white'>Get My CV</button>
+        </div> */}
+        <div className='lg:w-1/2 relative lg:static z-98' data-aos={animations.image} data-aos-delay='750' key={`profileImage-${renderKey}`}>
+          <picture>
             <source media="(max-width:40rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_680px.jpg?fm=webp?q=40" className='introsection_image' />
             <source media="(max-width:48rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_768px.jpg?fm=webp?q=40" className='introsection_image' />
             <source media="(max-width:64rem)" srcSet="/.netlify/images?url=/profile_picture/profile_images/profile_picture_max_1024px.jpg?fm=webp" className='introsection_image' />

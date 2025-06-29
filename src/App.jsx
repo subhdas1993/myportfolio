@@ -3,10 +3,13 @@ import './App.css'
 import HeaderSection from './components/HeaderSection'
 import IntroSection from './components/IntroSection'
 
-const AboutSection = lazy(()=>import('./components/AboutSection'));
-const WorkSection = lazy(()=>import('./components/WorkSection'));
-const ContactSection = lazy(()=>import('./components/ContactSection'));
-const FooterSection = lazy(()=>import('./components/FooterSection'));
+// const HeaderSection = lazy(() => import('./components/HeaderSection'));
+// const IntroSection = lazy(() => import('./components/IntroSection'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
+const WorkSection = lazy(() => import('./components/WorkSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const FooterSection = lazy(() => import('./components/FooterSection'));
+
 
 function App() {
   return (
